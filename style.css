@@ -312,6 +312,142 @@ p[data-width="wide"]{
   background-position: 80rem -40rem;
 }
 
+/* Footer Navigation  */
+
+
+footer{
+  padding: 3rem 0;
+}
+
+
+.footer-nav a{
+  color: var(--clr-neutral-100);
+  text-decoration: none;
+}
+
+.footer-nav a:is(:hover, :focus){
+  color: var(--clr-accent-400);
+}
+
+.footer-nav{
+  columns: 2;
+}
+
+/* Social List */
+
+.social-list{
+  display: flex;
+  gap: var(--size-500);
+}
+
+.social-icon{
+  width: var(--size-600);
+  fill: var(--clr-neutral-100);
+  aspect-ratio: 1;
+}
+
+.social-icon:is(:hover, :focus){
+  fill: var(--clr-accent-400);
+}
+
+input[type="email"]{
+  padding: 1em;
+  border-radius: 100vmax;
+  outline: none;
+  border: 0;
+}
+
+.f-btn{
+  box-shadow: none;
+}
+
+.copyright{
+  color: gray;
+}
+
+/* .social-list a:is(:hover, :focus) .social-icon{
+  fill: var(--clr-accent-400);
+} */
+
+
+@media (min-width: 53em){
+  .flex-footer{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+
+  .f-logo-socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .f-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .footer-nav li{
+    padding: 0;
+    margin: 0  0 1.2em 0;
+  }
+
+  .f-form{
+    justify-self: end;
+  }
+}
+
+
+@media (max-width: 53em){
+  .flex-footer{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem;
+  }
+  .f-logo-socials{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 3em;
+  }
+
+  /* .copyright{
+    order: -1;
+  } */
+
+  .copyright{
+    display: none;
+  }
+
+  .flex-footer > div{
+    padding-block: 1em;
+  }
+  
+  .footer-nav li{
+    padding: 0;
+    margin: 0  0 2em 0;
+  }
+
+  .flex-footer:before{
+    content: 'Copyright 2024. All Rights Reserved';
+  }
+
+}
+
+
+@media (min-width: 53em){
+
+  .social-list{
+    gap: var(--size-300);
+  }
+  .social-icon{
+    width: var(--size-500);
+  }
+}
+
 /* Utility classes */
 
 .container{
@@ -354,7 +490,7 @@ p[data-width="wide"]{
 }
 
 .flow > * + *{
-  margin-top: var(--flow-spacer, 3rem);
+  margin-top: var(--flow-spacer, 2rem);
 }
 
 .even-columns{

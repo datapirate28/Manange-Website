@@ -109,20 +109,42 @@
 
     <footer class="bg-neutral-900 text-neutral-100">
         <div class="container">
-            <div class="even-columns">
-                <div>
-                  <a href="#"><img src="Assets/logo.svg" alt="Manage"></a>
-                  <ul role="list" aria-label="Social links">
-                    <li><a aria-label="facebook" href="#"></a></li>
-                    <li><a aria-label="youtube" href="#"></a></li>
-                    <li><a aria-label="twitter" href="#"></a></li>
-                    <li><a aria-label="pinterest" href="#"></a></li>
-                    <li><a aria-label="instragram" href="#"></a></li>
+            <div class="flex-footer">
+                <div class="f-logo-socials">
+                  <a href="#">
+                    <svg class="logo-light-icon" width="146" height="24">
+                        <use xlink:href="Assets/logo-light.svg#logo"></use>
+                      </svg>
+                  </a>
+                  <ul class="social-list" role="list" aria-label="Social links">
+                    <li><a aria-label="facebook" href="#">
+                        <svg class="social-icon">
+                            <use xlink:href="Assets/social-icons.svg#icon-facebook"></use>
+                          </svg>
+                    </a></li>
+                    <li><a aria-label="youtube" href="#"><svg class="social-icon">
+                        <use xlink:href="Assets/social-icons.svg#icon-youtube"></use>
+                      </svg>
+                    </a></li>
+                    <li><a aria-label="twitter" href="#"></a>
+                        <svg class="social-icon">
+                            <use xlink:href="Assets/social-icons.svg#icon-twitter"></use>
+                          </svg></li>
+                    <li><a aria-label="pinterest" href="#">
+                        <svg class="social-icon">
+                            <use xlink:href="Assets/social-icons.svg#icon-pinterest"></use>
+                          </svg>
+                    </a></li>
+                    <li><a aria-label="instragram" href="#">
+                        <svg class="social-icon">
+                            <use xlink:href="Assets/social-icons.svg#icon-instagram"></use>
+                          </svg>
+                    </a></li>
                   </ul>
                 </div>
                 <div>
                   <nav class="footer-nav">
-                    <ul aria-label="Footer" role="list">
+                    <ul aria-label="Footer" role="list" class="flow">
                       <li><a href="#">Home</a></li>
                       <li><a href="#">Pricing</a></li>
                       <li><a href="#">Products</a></li>
@@ -133,14 +155,15 @@
                     </ul>
                   </nav>
                 </div>
-                <div>
+                <div class="f-form">
                   <form action="">
-                    <input type="email">
-                    <button class="button">Go</button>
+                    <input type="email" placeholder="Update in your inbox...">
+                    <button class="button f-btn">Go</button>
                   </form>
 
-                  <p>Copyright 2020. All Rights Reserved</p>
+                  <p class="copyright">Copyright 2020. All Rights Reserved</p>
                 </div>
+               
         </div>
     </footer>
 
