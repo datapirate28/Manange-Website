@@ -126,15 +126,12 @@ body{
     color: var(--clr-primary-400);
 }
 
-p:not([class]){
-  /* opacity: 0.6; */
-  color: hsla(228, 39%, 23%, 0.59);
-  max-width: 32ch;
-}
 
 p[data-width="wide"]{
   max-width: 42ch;
 }
+
+
 
 /* Button */
 
@@ -156,6 +153,7 @@ p[data-width="wide"]{
     background-color: var(--clr-accent-100);
     color: var(--clr-accent-400);
     box-shadow: 0.0em 1em 1em -1em var(--clr-accent-500);
+    margin-top: 2rem;
 }
 
 .button:hover,
@@ -282,6 +280,112 @@ p[data-width="wide"]{
     }
     
 }
+
+/* Hero Section Mob screen */
+
+@media (max-width: 53em){
+  .mob-screen{
+    justify-self: center;
+    text-align: center;
+  }
+
+  .hero-p{
+    text-align: center;
+    max-width: 32ch ;
+    color: hsla(228, 39%, 23%, 0.59);
+    margin-inline: auto;
+  }
+
+}
+
+/* Numbered Items */
+
+
+
+.numbered-items li{
+  list-style: none;
+}
+
+.list-nums{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.list-number{
+  font-size: var(--fs-500);
+  font-weight: var(--fw-semi-bold);
+  background-color: var(--clr-accent-400);
+  color: var(--clr-neutral-100);
+  padding: 0.4rem 1.4rem 0.4rem 1.4rem ;
+  border-radius: 100vmax;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.list-p{
+  margin-left: 4.8em;
+  color: hsla(228, 39%, 23%, 0.59);
+}
+
+.list-margin-bottom{
+  margin-bottom: 3em;
+}
+
+.md-screen{
+  justify-content: center;
+}
+
+.md-screen-p{
+  max-width: 32ch;
+  color: hsla(228, 39%, 23%, 0.59);
+}
+
+
+
+
+@media (max-width: 440px){
+  
+  .list-nums{
+    background-color: var(--clr-accent-100);
+    border-radius: 100vmax 0 0 100vmax;
+    box-shadow: 4em 0em 0em var(--clr-accent-100);
+  }
+
+  .list-number{
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .list-nums h3{
+    line-height: 1;
+  }
+
+  .md-screen-p{
+    margin: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 53em){
+  .md-screen-p{
+    text-align: center;
+    max-width: 32ch;
+    margin-inline: auto;
+    color: hsla(228, 39%, 23%, 0.59);
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 501px){
+  .fs-secondary-heading{
+    text-align: center;
+  }
+}
+
+
 
 /* Call to Action  */
 
@@ -457,6 +561,8 @@ input[type="email"]{
 
 /* Utility classes */
 
+
+
 .container{
   --max-width: 1110px;
   --padding: 1rem;
@@ -471,6 +577,8 @@ input[type="email"]{
       grid-auto-columns: 1fr;
   }
 }
+
+
 
 .vertical-align-center{
   align-items: center;
