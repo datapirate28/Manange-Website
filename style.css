@@ -41,6 +41,7 @@
   --size-700: 3rem;
   --size-800: 4rem;
   --size-900: 5rem;
+  --size-990: 5.1rem;
 }
 
 @media (min-width: 50em) {
@@ -123,6 +124,16 @@ body{
     font-size: var(--fs-body);
     font-family: var(--ff-body);
     color: var(--clr-primary-400);
+}
+
+p:not([class]){
+  /* opacity: 0.6; */
+  color: hsla(228, 39%, 23%, 0.59);
+  max-width: 32ch;
+}
+
+p[data-width="wide"]{
+  max-width: 42ch;
 }
 
 /* Button */
@@ -272,7 +283,88 @@ body{
     
 }
 
+/* Call to Action  */
+
+.cta{
+  position: relative;
+  isolation: isolate;
+}
+
+.cta::before{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url(Assets/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  background-position: -20rem -2rem;
+}
+
+.cta::after{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url(Assets/bg-tablet-pattern.svg);
+  background-repeat: no-repeat;
+  opacity: 0.1;
+  background-position: 80rem -40rem;
+}
+
 /* Utility classes */
+
+.container{
+  --max-width: 1110px;
+  --padding: 1rem;
+
+  width: min((var(--max-width)), 100% - (var(--padding)*2));
+  margin-inline: auto;
+} 
+
+@media (min-width: 53em){
+  .even-columns{
+      grid-auto-flow: column;
+      grid-auto-columns: 1fr;
+  }
+}
+
+.vertical-align-center{
+  align-items: center;
+}
+
+.push-right{
+  justify-self: end;
+}
+
+@media (max-width: 53em){
+  .vertical-align-center{
+    justify-content: center;
+  }
+
+  .push-right{
+    justify-self: center;
+  }
+
+  .cta .fw-blod-md{
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  
+}
+
+.flow > * + *{
+  margin-top: var(--flow-spacer, 3rem);
+}
+
+.even-columns{
+  display: grid;
+  gap: 1rem;
+}
+
+
+
+
 
 .text-primary-400 {
     color: var(--clr-primary-400);
@@ -346,27 +438,11 @@ body{
     padding-block: var(--size-700);
   }
 
-  .container{
-    --max-width: 1110px;
-    --padding: 1rem;
-
-    width: min((var(--max-width)), 100% - (var(--padding)*2));
-    margin-inline: auto;
+  .padding-block-990 {
+    padding-block: var(--size-990);
   }
 
-  .even-columns{
-    display: grid;
-    gap: 1rem;
-  }
 
-  
-
-@media (min-width: 50em){
-    .even-columns{
-        grid-auto-flow: column;
-        grid-auto-columns: 1fr;
-    }
-}
 
 
 
