@@ -7,8 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    
 </head>
 <body>
     
@@ -96,10 +100,53 @@
             </div>
         </section>
 
-        <section class="carousel padding-block-900">
-            <h2 class="fs-secondary-heading">What they've said</h2>
-            <!-- Carousel here -->
-            <button class="button">Get Started</button>
+        <section class="carousel padding-block-500">
+            <h2 class="fs-secondary-heading slider-title">What they've said</h2>
+
+          <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div data-hash="slide1" class="swiper-slide one">
+                        <img src="Assets/avatar-anisha.png" alt="">
+
+                        <div class="slider-content | flow" style="--flow-spacer: 1rem">
+                            <h3 class="fw-bold">Anisha Li</h3>
+                            <p data-width="wide">“Manage has supercharged our team’s workflow. The ability to maintain visibility on
+                              larger milestones at all times keeps
+                              everyone motivated.”</p>
+                          </div>
+                    </div>
+                    <div data-hash="slide2" class="swiper-slide"><img src="Assets/avatar-ali.png" alt="">
+
+                        <div class="slider-content | flow" style="--flow-spacer: 1rem">
+                            <h3 class="fw-bold">Ali Bravo</h3>
+                            <p data-width="wide">“Manage has supercharged our team’s workflow. The ability to maintain visibility on
+                              larger milestones at all times keeps
+                              everyone motivated.”</p>
+                          </div></div>
+                    <div data-hash="slide3" class="swiper-slide"><img src="Assets/avatar-richard.png" alt="">
+
+                        <div class="slider-content | flow" style="--flow-spacer: 1rem">
+                            <h3 class="fw-bold">Richard Watts</h3>
+                            <p data-width="wide">“Manage has supercharged our team’s workflow. The ability to maintain visibility on
+                              larger milestones at all times keeps
+                              everyone motivated.”</p>
+                          </div></div>
+                    <div data-hash="slide4" class="swiper-slide"><img src="Assets/avatar-shanai.png" alt="">
+
+                        <div class="slider-content | flow" style="--flow-spacer: 1rem">
+                            <h3 class="fw-bold">Shanai Gough</h3>
+                            <p data-width="wide">“Manage has supercharged our team’s workflow. The ability to maintain visibility on
+                              larger milestones at all times keeps
+                              everyone motivated.”</p>
+                          </div></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            
+            <div class="center-btn">
+                <button class="button p-center">Get Started</button>
+            </div>
         </section>
 
         <section class=" cta | padding-block-990 bg-accent-400 text-neutral-100 padding-block-700">
@@ -179,6 +226,8 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="app.js"></script>
+    
 </body>
 </html>
