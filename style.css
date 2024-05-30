@@ -296,6 +296,12 @@ p[data-width="wide"]{
     margin-inline: auto;
   }
 
+  .hero-image{
+    padding-left: 1.5rem;
+  }
+  .hero-img{
+    margin-inline: auto;
+  }
 }
 
 /* Numbered Items */
